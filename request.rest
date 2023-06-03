@@ -1,0 +1,95 @@
+//create user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "nama": "capstone",
+    "email": "admin@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "admin"
+}
+###
+//get All User
+GET http://localhost:5000/users
+
+###
+//Get Single User
+GET http://localhost:5000/users/0a975778-a9dd-4e8d-bf73-17ec98517653
+
+
+###
+//update user
+PATCH  http://localhost:5000/users/0a975778-a9dd-4e8d-bf73-17ec98517653
+Content-Type: application/json
+
+{
+    "nama": "bila abiyyah",
+    "email": "bilaabiyyah@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+//delete user
+DELETE http://localhost:5000/users/0a975778-a9dd-4e8d-bf73-17ec98517653
+
+###
+//login user admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "123456"
+}
+
+###
+//login user bukan admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "bilaabiyyah@gmail.com",
+    "password": "123456"
+}
+
+###
+GET http://localhost:5000/me
+
+###
+//Logout
+DELETE http://localhost:5000/logout
+
+###
+//Get All Products
+GET http://localhost:5000/products
+
+###
+//Get Single Products
+GET http://localhost:5000/products/bc2a5b5d-7b31-4226-b456-b0f42efac3e9
+
+###
+//Post data Products
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "nama": "Prod 5",
+    "price": "9969"
+}
+
+###
+//update data product
+PATCH http://localhost:5000/products/d8382f16-c7c6-4d54-bf51-7f90d8e20249
+Content-Type: application/json
+
+{
+    "nama": "Prod sudah di update",
+    "price": "9969000"
+}
+
+###
+//delete data product
+DELETE  http://localhost:5000/products/bc2a5b5d-7b31-4226-b456-b0f42efac3e9
